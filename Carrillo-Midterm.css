@@ -151,7 +151,7 @@ a:hover {
     background-size: cover;
 }
 
-.container:nth-child(2) {
+.container:nth-child(3) {
     position: relative;
     background-color: rgb(165, 0, 0);
     height: 30rem;
