@@ -5,8 +5,6 @@
     padding: 0;
     border: 0;
     margin: 0;
-    list-style: none;
-    text-decoration: none;
 }
 
 body {
@@ -67,10 +65,9 @@ h5 {
 .iframe-container {
     overflow: hidden;
     position: relative;
+}
 
-  }
-
-  .iframe-container iframe {
+.iframe-container iframe {
     margin-top: 2rem;
     border: 0;
     height: 660px;
@@ -81,7 +78,7 @@ h5 {
 
 .iframe-container-4x3 {
     padding-top: 75%;
-  }
+}
 
 #javaLogo {
     width: 10rem;
@@ -102,7 +99,6 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: justify;
-
 }
 
 .info-title {
@@ -127,13 +123,15 @@ nav {
     width: 100%;
 }
 
-ul {
+#nav-ul {
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
 
-a {
+.nav-bar a {
+    text-decoration: none;
     color: rgb(221, 221, 221);
     font-size: 1.1vw;
     font-family: 'Cairo', sans-serif;
@@ -141,8 +139,99 @@ a {
     letter-spacing: .3vw;
 }
 
+.video-brief {
+    background-color: rgba(0,0,0, 0.6);
+    backdrop-filter: blur(5px);
+    padding:1rem;
+    margin:0;
+    margin-top: 1rem;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+#install-steps {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    padding:1rem;
+    margin:0;
+    color: whitesmoke;
+}
+
+#install-steps .li-parent {
+
+    counter-increment: my-awesome-counter;
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+#install-steps .li-parent::before {
+
+    content: "0" counter(my-awesome-counter);
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.li-parent ul {
+    list-style: none;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.li-parent a {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.code-snip pre {
+    display: inline-block;
+}
+
+
+
+
 a:hover {
     color: white;
+}
+
+.code-snip {
+    font-size: 2rem;
+    padding-left: 3rem;
+    display: inline-block;
+}
+
+.code-specifier {
+    color: rgb(255, 142, 199);
+}
+.code-element-name-type {
+    color: greenyellow;
+}
+.code-variable-name {
+    color: rgb(73, 210, 255);
+}
+
+.operator {
+    color: red
+}
+
+.code-string {
+    color: rgb(255, 208, 0);
+}
+.comment {
+    color: rgb(192, 192, 192);
+}
+
+.explination {
+    font-size: 1rem;
+    padding: 2rem 3rem 2rem 3rem;
 }
 
 .container:nth-child(1) {
@@ -157,23 +246,52 @@ a:hover {
     height: 30rem;
 }
 
-
-
 .container:nth-child(4) {
     background-image: url("pics/riverSunset.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
 
-
 .container:nth-child(5) {
     position: relative;
     background-color: rgb(165, 0, 0);
-    height: 30rem;
+    height: 25rem;
 }
 
 .container:nth-child(6) {
     background-image: url("pics/bud.jpg");
     background-attachment: fixed;
     background-size: cover;
+}
+
+.container:nth-child(6) iframe {
+    height: 560px;
+}
+
+.container:nth-child(7) {
+    position: relative;
+
+    background-color: rgb(165, 0, 0);
+    height: 25rem;
+}
+
+.container:nth-child(8) {
+    background-image: url("pics/leaves2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    position: relative;
+    background-color: rgb(165, 0, 0);
+    width: 100%;
+    height: 200px;
+}
+
+.footer-container {
+    position: absolute;
+    width: 70%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
