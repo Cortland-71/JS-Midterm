@@ -326,10 +326,10 @@ a:hover {
     
 }
 
-/* #color-titles h1, 
+#color-titles h1, 
 #color-titles p {
     color: black;
-} */
+}
 
 .quote p {
     font-weight: bold;
@@ -370,6 +370,35 @@ a:hover {
     background-attachment: fixed;
     background-size: cover;
 }
+
+
+
+
+
+
+.container3:nth-child(1) {
+    background-image: url("pics/loops/lookup.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container3:nth-child(3) {
+    background-image: url("pics/loops/red.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container3:nth-child(4) {
+    position: relative;
+    background-color: rgb(165, 0, 0);
+    height: 25rem;
+}
+.container3:nth-child(5) {
+    background-image: url("pics/loops/people.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
 
 footer {
     position: relative;

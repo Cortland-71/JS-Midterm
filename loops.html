@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Carrillo-Midterm.css">
+    <title>Java Jujutsu - LOOPS</title>
+</head>
+<body>
+    <div class="container3">
+        <div class="content">
+            <div class="titles" id="color-titles">
+                <div>
+                    <h1>LOOPS.</h1>
+                </div>
+                <br>
+                <div class="quote">
+                    <p >
+                        " In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them. "  
+                    </p>
+                    <br>
+                    <p>-Andrew Hunt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="nav-bar">
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="Carrillo-Midterm.html">HOME</a></li>
+                <li><a href="logic.html">LOGIC</a></li>
+                <li><a href="loops.html">LOOPS</a></li>
+                <li><a href="#">TOGETHER</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container3">
+        <div class="content-long">
+            <div class="video-section">
+                <div class="video-brief">
+                    <div class="explination">
+                        <h2 class="sub-title">while loop</h2>
+                        <p>Okay so in this section we're going to take a look at two kinds of loops in Java. The while loop and the for loop. Let's first take a look at the while loop.</p>
+                        <br>
+                        <p>The while loop is the simplest form of a loop in Java. Much like the if statment in the previous section, it only executes if a condition is true. The big difference from the if statment however is that it will continue to execute over and over again until the condition is false. Let's look at an example.</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre>3  </pre><pre class="code-pink">int </pre><pre>a</pre>
+                            <pre class="operator"> = </pre><pre class="number-literal">0</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>4  </pre>
+                            <br>
+                            <pre>5  </pre><pre class="code-pink">while</pre><pre> (</pre><pre>a</pre><pre class="operator"> < </pre><pre class="number-literal">10</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>6  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>a</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre>}</pre>
+                            
+                        </div>
+                        <br><br>
+                        <p>Just like the if statment, you can see on line 5 there is the keyword "while" followed by a boolean condition. In this case "a" is less than 10 so it will print out a, but wait a minute, something is strange here. This is what is called an infinite loop. Because "a" is 0 and never changes it will always be less than 10. This will produce an infinite number of 0's to the console. Let's try and fix this.</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre>3  </pre><pre class="code-pink">int </pre><pre>a</pre>
+                            <pre class="operator"> = </pre><pre class="number-literal">0</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>4  </pre>
+                            <br>
+                            <pre>5  </pre><pre class="code-pink">while</pre><pre> (</pre><pre>a</pre><pre class="operator"> < </pre><pre class="number-literal">10</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>6  </pre><pre>  a</pre><pre class="operator"> = </pre><pre>a</pre><pre class="operator"> + </pre><pre class="number-literal">1</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>a</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre>}</pre>
+                            
+                        </div>
+                        <br><br>
+                        <p>That's looking better. Adding line 6 made this loop stop once "a" reached 10. Line 6 adds 1 to "a" everytime the loop happens and then on line 7 it prints out "a". Once line 7 is done executing the loop will check it's condition once more, if "a" is still less than 10 it will do the process over again. The output would look like this.</p>
+                        <br>
+                        <p>1 <br>2 <br>3 <br>4 <br>5 <br>6 <br>7 <br>8 <br>9 <br>10</p>
+                        <br>
+                        <p>Play around with this code and see what other things you can output. For example you could reverse the output.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/INXHUjWpNR8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container3">
+        <div>
+            <div class="info">
+                <div>
+                    <h2 class="info-title">SMALL MOVES</h2>
+                </div>
+                <div>
+                    <p>
+                        Loops are one of the most valuable tools at your desposale. They are efficiant for iterating over lists and performing tasks in succession. Learn to use loops and you will cut out a lot of tedium. More advanced techniques might include nested loops. We won't be going into this here but know that you can nest loops inside of other loops. This creates a two dimentional effect and can be very powerfull.  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <div class="content-xlong">
+            <div class="video-section">
+                
+
+                <div class="video-brief">
+                    <div class="explination">
+                        <h2 class="sub-title">for loop</h2>
+                        <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number between a specific amount. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
+                        
+                    </div>
+                    
+                </div>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/5e69tndxJ8I" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div>
+            <div class="info">
+                <div>
+                    <h2 class="info-title">if</h2>
+                </div>
+                <div>
+                    <p>
+                        Things are going to be getting a bit more interesting now. Let's see how to implement logic into our code. The idea is to feed in a condition (true or false) and let the computer make a decision. We can do this using the "if", "else if" and "else" statments.
+                    </p>
+        
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="content-xxlong">
+            <div class="video-section">
+                
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/7q9vwgYwnk4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br><br><br><br>
+                <div class="video-brief">
+                    <div class="explination">
+                        <h2 class="sub-title">Conditions</h2>
+                        <p>As you saw in the video, if statements are very powerfull and allow you to check a condition in order to execute code. Let's look at some examples.</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre>1  </pre><pre class="code-pink">int </pre><pre>x</pre>
+                            <pre class="operator"> = </pre><pre class="number-literal">10</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>x</pre><pre class="operator"> > </pre><pre class="number-literal">10</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"fish tacos"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>5  </pre><pre>}</pre><pre class="code-pink"> else </pre><pre>{</pre>
+                            <br>
+                            <pre>6  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"pizza!"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre>}</pre>
+                            
+                        </div>
+                        <br>
+                        <br>
+                        <p>Did you get "pizza!"? If not, that's okay. Just look at the code again and try and see what you might be missing. If you did get it right you probably realised that x is in fact NOT greater than 10, it is equal to 10. The condition is checking if x is greater than 10. It is not greater it is equal so the "else" block gets executed.</p>
+                        <br>
+                        <p>What about this example?</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre>1  </pre><pre class="code-pink">int </pre><pre>y</pre>
+                            <pre class="operator"> = </pre><pre class="number-literal">15</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>y</pre><pre class="operator"> = </pre><pre class="number-literal">15</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"apples"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>5  </pre><pre>}</pre><pre class="code-pink"> else </pre><pre>{</pre>
+                            <br>
+                            <pre>6  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"bananas"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre>}</pre>
+                            
+                        </div>
+                        <br>
+                        <br>
+                        <p>This was a trick question, remember that the = is an assignment operator. The == double equals check if two things are the same. Notice on line 3 where the if statment is checking it's condition. It's trying to assign 15 to y, that is not allowed in an if statment. So this code wouldn't compile. What should be there is the double equals == in which case "apples" would get printed.</p>
+                    </div>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>Rescources</h2>
+            </div>
+            <div>
+                <p>https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/</p>
+            </div>
+            <div>
+                <p>https://www.theserverside.com/definition/Java</p>
+            </div>
+            <div>
+                <p>https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
