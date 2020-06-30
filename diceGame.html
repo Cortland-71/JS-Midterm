@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Carrillo-Midterm.css">
+    <title>Java Jujutsu - PRESS START</title>
+</head>
+<body>
+    <div class="container4">
+        <div class="content">
+            <div class="titles">
+                <div>
+                    <h1>CREATE.</h1>
+                </div>
+
+                <div class="quote">
+                    <p >
+                        " Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter. "  
+                    </p>
+                    <br>
+                    <p>-Eric Raymond</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="nav-bar">
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="Carrillo-Midterm.html">HOME</a></li>
+                <li><a href="logic.html">LOGIC</a></li>
+                <li><a href="loops.html">LOOPS</a></li>
+                <li><a href="diceGame.html">NEW GAME</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container4">
+        <div class="content-game-long">
+            <div class="video-section">
+                <div class="video-brief">
+                    <div class="explanation">
+                        <h2 class="sub-title">Let's make something!</h2>
+                        <p></p>
+                        <br>
+                        <p>Okay so up to this point you've seen quite a lot. Time to put things into practice. This is going to be a simple guessing game where a random number will be generated and the player will try and guess the number. It will notify the player if their guess was either too high or too low. Once they guess correctly the game will end.</p>
+                        <br>
+                        <p>Let's start with the basic skeleton of a Java program.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            <pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                             <pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <br>
+                            <pre>  }</pre>
+                            <br>
+                            <pre>}</pre>
+                            
+                        </div>
+                        <br><br><br><br>
+                        <p>We are going to want to get input from the user as well as generate a random number. For this we are going to need to create some objects. Objects are outside the scope of this tutorial for now so just copy it and store the idea in your mind for later.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            
+                            <pre>1  </pre><pre class="code-pink">import </pre><pre>java</pre><pre class="operator">.</pre><pre>util</pre><pre class="operator">.*;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <pre>5  </pre><br>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre>  }</pre>
+                            <br>
+                            <pre>9  </pre><pre>}</pre>
+                        </div>
+                        <br><br><br>
+                        <p>We have added several things now. You can see on line 1, 6 and 7 we added something. Line 1 is simply importing the ability to use Random and Scanner. Don't worry too much about this right now. Just know that it must be at the top of the file before the class definition.</p>
+                        <br>
+                        <p>Lines 6 and 7 are the objects I mentioned earlier. Notice the names of these objects. Line 6's object is named myNumberGenerator and on line 7 I named the scanner userInputGetter. These are the names we are going to generate a random number and get user input.</p>
+                        <br><br>
+                        <p>Let's generate a random number now and store it in a variable.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            
+                            <pre>1  </pre><pre class="code-pink">import </pre><pre>java</pre><pre class="operator">.</pre><pre>util</pre><pre class="operator">.*;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <pre>5  </pre><br>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>myNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>9  </pre><pre>  }</pre>
+                            <br>
+                            <pre>10  </pre><pre>}</pre>
+                        </div>
+                        <br><br><br>
+                        <p>As you can see on line 8, we are using the myNumberGenerator to call a method that will generate a number between 0 and 10. The number 11 beng passed to the method is exclusive. We are then storing that random number into an int variable called answer.</p>
+                        <br><br>
+                        <p>Next let's display a welcome screen and prompt the user for their guess.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            
+                            <pre>1  </pre><pre class="code-pink">import </pre><pre>java</pre><pre class="operator">.</pre><pre>util</pre><pre class="operator">.*;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <pre>5  </pre><br>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>myNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>9  </pre>
+                            <br>
+                            <pre>10 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"***** WELCOME! *****"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>11 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"I'm thinking of a number between 1 and 10..."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">Please enter your guess: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>13 </pre><pre class="code-pink">    int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>userInputGetter</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>10 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed: "</pre><pre class="operator"> + </pre><pre>guess</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>9  </pre><pre>  }</pre>
+                            <br>
+                            <pre>10  </pre><pre>}</pre>
+                        </div>
+                        <br><br><br>
+                        <p>Try running the program at this point and test it out. Before we move on to adding the logic, here are a few tips and things to think about when programming.</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container4">
+        <div>
+            <div class="info">
+                <div>
+                    <h2 class="info-title">TIPS</h2>
+                </div>
+                <div>
+                    <p>Let's go over what we just did.</p>
+                    <br>
+                    <p>If I said something like (a + a) you would understand this to equate to the number 6. Variables can change to something else of course but in Java it's important to remember that the kind of data that can be stored in a variable must be mentioned explicitly.</p>
+                    <br>
+                    <p>Let's look at an example...</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="container4">
+        <div class="content-xlong">
+            <div class="video-section">
+                
+
+                <div class="video-brief">
+                    <div class="explanation">
+                        <h2 class="sub-title">Integers</h2>
+                        <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number between a specific amount. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre class="code-pink">int </pre><pre>a</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator">;</pre>
+                            
+                        </div>
+                        <br>
+                        <br>
+                        <p>In this example the "int a" portion is our variable declaration. It's telling java that we want to make a variable called "a" and the type is an integer. The "= 4" is our value assignment. The "=" means assign and the "4" is the value.</p>
+                        <br>
+                        <p>Let's see if you can guess what this output would be:</p>
+                        <br>
+                        <div class="code-snip">
+                            <pre class="code-pink">int </pre><pre>a</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator"> + </pre><pre class="code-literal">3</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre class="code-pink">int </pre><pre>b</pre>
+                            <pre class="operator"> = </pre><pre>a</pre><pre class="operator"> - </pre><pre class="code-literal">5</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>b</pre><pre>)</pre><pre class="operator">;</pre>
+                            
+                        </div>
+                        <br>
+                        <br>
+                        <p>If you got the answer 2 then you'd be right! If you didn't don't worry, look over the code and follow the chain of events. The first line creates an integer called "a". We then assign "a" to the total 7. We create a new integer called "b" and assign the value of "a" minus 5 which would be 2. At the end we print out "b".</p>
+                    </div>
+                </div>
+                 <br><br>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/5e69tndxJ8I" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>Rescources</h2>
+            </div>
+            <div>
+                <p>https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/</p>
+            </div>
+            <div>
+                <p>https://www.theserverside.com/definition/Java</p>
+            </div>
+            <div>
+                <p>https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too</p>
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>

@@ -22,20 +22,21 @@ body {
     width: 100%;
     height: 165vh;
 }
-
 .content-xlong {
     position: relative;
     width: 100%;
-    height: 195vh;
+    height: 180vh;
 }
-
-
 .content-xxlong {
     position: relative;
     width: 100%;
     height: 220vh;
 }
-
+.content-game-long {
+    position: relative;
+    width: 100%;
+    height: 320vh;
+}
 .titles {
     position: relative;
     text-align: left;
@@ -88,6 +89,7 @@ h5 {
 
 .iframe-container iframe {
     margin-top: 2rem;
+    margin-bottom: 1rem;
     border: 0;
     height: 660px;
     left: 0;
@@ -98,7 +100,7 @@ h5 {
 
 .small-iframe-container {
     position: relative;
-    height: 365px;
+    height: 400px;
     width: 100%;
     margin-top: 1rem;
 
@@ -107,7 +109,7 @@ h5 {
 .small-iframe-container iframe {
  
     border: 0;
-    height: 365px;
+    height: 400px;
     width: 100%;
     border-radius: 10px;
 }
@@ -119,7 +121,7 @@ h5 {
 .small-video-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 #javaLogo {
@@ -184,9 +186,9 @@ nav {
 .video-brief {
     background-color: rgba(0,0,0, 0.6);
     backdrop-filter: blur(5px);
-    padding:1rem;
     margin:0;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     color: whitesmoke;
     border-radius: 10px;
 }
@@ -226,7 +228,7 @@ nav {
     text-align: left;
 }
 
-.li-parent a, .explination a {
+.li-parent a, .explanation a {
     text-decoration: none;
     color: red;
     font-weight: bold;
@@ -248,7 +250,7 @@ a:hover {
     display: inline-block;
 }
 
-.number-literal {
+.code-literal {
     color: rgb(227, 136, 255);
 }
 
@@ -273,9 +275,9 @@ a:hover {
     color: rgb(192, 192, 192);
 }
 
-.explination {
+.explanation {
     font-size: 1rem;
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 3rem 3rem 3rem 3rem;
 }
 
 .container:nth-child(1) {
@@ -393,6 +395,40 @@ a:hover {
 }
 .container3:nth-child(5) {
     background-image: url("pics/loops/people.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.container4 h1 {
+    font-size: 12rem;
+    line-height: 9.5rem;
+}
+
+
+.container4:nth-child(1) {
+    
+    background-image: url("pics/dice/cube.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+
+.container4:nth-child(3) {
+    background-image: url("pics/dice/code.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+     
+}
+.container4:nth-child(4) {
+    position: relative;
+    background-color: rgb(165, 0, 0);
+    height: 25rem;
+}
+.container4:nth-child(5) {
+    background-image: url("pics/dice/keyboard2.jpg");
     background-attachment: fixed;
     background-size: cover;
 }

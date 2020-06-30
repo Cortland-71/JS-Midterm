@@ -34,7 +34,7 @@
                 <li><a href="Carrillo-Midterm.html">HOME</a></li>
                 <li><a href="logic.html">LOGIC</a></li>
                 <li><a href="loops.html">LOOPS</a></li>
-                <li><a href="#">TOGETHER</a></li>
+                <li><a href="diceGame.html">NEW GAME</a></li>
             </ul>
         </nav>
     </div>
@@ -43,7 +43,7 @@
         <div class="content-long">
             <div class="video-section">
                 <div class="video-brief">
-                    <div class="explination">
+                    <div class="explanation">
                         <h2 class="sub-title">Installing Eclipse IDE</h2>
                         <p>Now that you know how to create a simple Java program using notepad and CMD, it's time to switch over to an actual development environment. A IDE or Integrated Developer Environment like Eclipse will allow you to write Java programs, compile and run them all in one easy window.</p>
                         <br>
@@ -93,13 +93,13 @@
                 
 
                 <div class="video-brief">
-                    <div class="explination">
+                    <div class="explanation">
                         <h2 class="sub-title">Integers</h2>
                         <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number between a specific amount. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
                         <br>
                         <div class="code-snip">
                             <pre class="code-pink">int </pre><pre>a</pre>
-                            <pre class="operator"> = </pre><pre class="number-literal">4</pre><pre class="operator">;</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator">;</pre>
                             
                         </div>
                         <br>
@@ -110,10 +110,10 @@
                         <br>
                         <div class="code-snip">
                             <pre class="code-pink">int </pre><pre>a</pre>
-                            <pre class="operator"> = </pre><pre class="number-literal">4</pre><pre class="operator"> + </pre><pre class="number-literal">3</pre><pre class="operator">;</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator"> + </pre><pre class="code-literal">3</pre><pre class="operator">;</pre>
                             <br>
                             <pre class="code-pink">int </pre><pre>b</pre>
-                            <pre class="operator"> = </pre><pre>a</pre><pre class="operator"> - </pre><pre class="number-literal">5</pre><pre class="operator">;</pre>
+                            <pre class="operator"> = </pre><pre>a</pre><pre class="operator"> - </pre><pre class="code-literal">5</pre><pre class="operator">;</pre>
                             <br>
                             <pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>b</pre><pre>)</pre><pre class="operator">;</pre>
                             
@@ -157,22 +157,20 @@
         <div class="content-xxlong">
             <div class="video-section">
                 
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/7q9vwgYwnk4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                
                 <br><br><br><br>
                 <div class="video-brief">
-                    <div class="explination">
+                    <div class="explanation">
                         <h2 class="sub-title">Conditions</h2>
                         <p>As you saw in the video, if statements are very powerfull and allow you to check a condition in order to execute code. Let's look at some examples.</p>
                         <br>
                         <div class="code-snip">
                             <pre>3  </pre><pre class="code-pink">int </pre><pre>x</pre>
-                            <pre class="operator"> = </pre><pre class="number-literal">10</pre><pre class="operator">;</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">10</pre><pre class="operator">;</pre>
                             <br>
                             <pre>4  </pre>
                             <br>
-                            <pre>5  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>x</pre><pre class="operator"> > </pre><pre class="number-literal">10</pre><pre>)</pre><pre> {</pre>
+                            <pre>5  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>x</pre><pre class="operator"> > </pre><pre class="code-literal">10</pre><pre>)</pre><pre> {</pre>
                             <br>
                             <pre>6  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"fish tacos"</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
@@ -191,11 +189,11 @@
                         <br>
                         <div class="code-snip">
                             <pre>3  </pre><pre class="code-pink">int </pre><pre>y</pre>
-                            <pre class="operator"> = </pre><pre class="number-literal">15</pre><pre class="operator">;</pre>
+                            <pre class="operator"> = </pre><pre class="code-literal">15</pre><pre class="operator">;</pre>
                             <br>
                             <pre>4  </pre>
                             <br>
-                            <pre>5  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>y</pre><pre class="operator"> = </pre><pre class="number-literal">15</pre><pre>)</pre><pre> {</pre>
+                            <pre>5  </pre><pre class="code-pink">if</pre><pre> (</pre><pre>y</pre><pre class="operator"> = </pre><pre class="code-literal">15</pre><pre>)</pre><pre> {</pre>
                             <br>
                             <pre>6  </pre><pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"apples"</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
@@ -208,11 +206,13 @@
                         </div>
                         <br>
                         <br>
-                        <p>This was a trick question, remember that the = is an assignment operator. The == double equals check if two things are the same. Notice on line 5 where the if statment is checking it's condition. It's trying to assign 15 to y, that is not allowed in an if statment. So this code wouldn't compile. What should be there is the double equals == in which case "apples" would get printed.</p>
+                        <p>This was a trick question, remember that the = is an assignment operator. The == double equals check if two things are the same. Notice on line 5 where the if statment is checking it's condition. It's trying to assign 15 to y, that is not allowed in an if statement. So this code wouldn't compile. What should be there is the double equals == in which case "apples" would get printed.</p>
                     </div>
                 </div>
                 
-
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/7q9vwgYwnk4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 
             </div>
         </div>
