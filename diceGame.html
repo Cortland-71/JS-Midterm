@@ -32,7 +32,7 @@
                 <li><a href="Carrillo-Midterm.html">HOME</a></li>
                 <li><a href="logic.html">LOGIC</a></li>
                 <li><a href="loops.html">LOOPS</a></li>
-                <li><a href="diceGame.html">NEW GAME</a></li>
+                <li><a href="diceGame.html">CREATE</a></li>
             </ul>
         </nav>
     </div>
@@ -61,7 +61,7 @@
                             
                         </div>
                         <br><br><br><br>
-                        <p>We are going to want to get input from the user as well as generate a random number. For this we are going to need to create some objects. Objects are outside the scope of this tutorial for now so just copy it and store the idea in your mind for later.</p>
+                        <p>We are going to want to get input from the user as well as generate a random number. For this we are going to need to create some objects. Objects are outside the scope of this tutorial so for now, just copy it and store the idea in your mind for later.</p>
                         <br><br>
                         <div class="code-snip">
                             
@@ -74,9 +74,9 @@
                             <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
                             <br>
                             <pre>5  </pre><br>
-                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>randomNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>keyboard</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
                             <pre>8  </pre><pre>  }</pre>
                             <br>
@@ -85,7 +85,7 @@
                         <br><br><br>
                         <p>We have added several things now. You can see on line 1, 6 and 7 we added something. Line 1 is simply importing the ability to use Random and Scanner. Don't worry too much about this right now. Just know that it must be at the top of the file before the class definition.</p>
                         <br>
-                        <p>Lines 6 and 7 are the objects I mentioned earlier. Notice the names of these objects. Line 6's object is named myNumberGenerator and on line 7 I named the scanner userInputGetter. These are the names we are going to generate a random number and get user input.</p>
+                        <p>Lines 6 and 7 are the objects I mentioned earlier. Notice the names of these objects. Line 6 is named randomNumberGenerator and line 7's object reference is named keyboard. Using these reference names, you can access the really useful bits in java.</p>
                         <br><br>
                         <p>Let's generate a random number now and store it in a variable.</p>
                         <br><br>
@@ -100,18 +100,20 @@
                             <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
                             <br>
                             <pre>5  </pre><br>
-                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>randomNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>keyboard</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>myNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>randomNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
                             <pre>9  </pre><pre>  }</pre>
                             <br>
                             <pre>10  </pre><pre>}</pre>
                         </div>
                         <br><br><br>
-                        <p>As you can see on line 8, we are using the myNumberGenerator to call a method that will generate a number between 0 and 10. The number 11 beng passed to the method is exclusive. We are then storing that random number into an int variable called answer.</p>
+                        <p>As you can see on line 8, we are using the randomNumberGenerator to call a method that will generate a number between 0 and 10. The number 11 being passed to the method is exclusive. We are then storing that random number into an int variable called answer.</p>
+                        <br><br>
+                        <p>Try printing out this random number and run your program a few times.</p>
                         <br><br>
                         <p>Next let's display a welcome screen and prompt the user for their guess.</p>
                         <br><br>
@@ -126,11 +128,11 @@
                             <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
                             <br>
                             <pre>5  </pre><br>
-                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>myNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>randomNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>userInputGetter</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>keyboard</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>myNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>randomNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
                             <pre>9  </pre>
                             <br>
@@ -138,18 +140,21 @@
                             <br>
                             <pre>11 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"I'm thinking of a number between 1 and 10..."</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">Please enter your guess: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Please enter a number: "</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>13 </pre><pre class="code-pink">    int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>userInputGetter</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
+                            <pre>13 </pre><pre class="code-pink">    int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>keyboard</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
                             <br>
                             <pre>10 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed: "</pre><pre class="operator"> + </pre><pre>guess</pre><pre>)</pre><pre class="operator">;</pre>
                             <br>
-                            <pre>9  </pre><pre>  }</pre>
+                            <pre>11 </pre>
                             <br>
-                            <pre>10  </pre><pre>}</pre>
+                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Goodbye."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>13  </pre><pre>  }</pre>
+                            <br>
+                            <pre>14  </pre><pre>}</pre>
                         </div>
-                        <br><br><br>
-                        <p>Try running the program at this point and test it out. Before we move on to adding the logic, here are a few tips and things to think about when programming.</p>
+                        
                     </div>
                 </div>
 
@@ -166,11 +171,46 @@
                     <h2 class="info-title">TIPS</h2>
                 </div>
                 <div>
-                    <p>Let's go over what we just did.</p>
-                    <br>
-                    <p>If I said something like (a + a) you would understand this to equate to the number 6. Variables can change to something else of course but in Java it's important to remember that the kind of data that can be stored in a variable must be mentioned explicitly.</p>
-                    <br>
-                    <p>Let's look at an example...</p>
+                    <ol id="tips">
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Learn the Basics</h3></li>
+                                <li>As with anything, knowing the basics about Java is the best place to start. This is something you can start straight away – studying the basics online is a huge help to kick-starting your Java programming. Like many things, it can be a bit overwhelming at the start but don't give up!</li>
+                            </ul>
+                        </li>
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Code Everyday</h3></li>
+                                <li>Consistency is very important when you are learning a new language. I recommend making a commitment to code every day. It may be hard to believe, but muscle memory plays a large part in programming. Committing to coding everyday will really help develop that muscle memory.</li>
+                            </ul>
+                        </li>
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Take Breaks</h3></li>
+                                <li>When you are learning, it is important to step away and absorb the concepts. The Pomodoro Technique is widely used and can help: you work for 25 minutes, take a short break, and then repeat the process. Taking breaks is critical to having an effective study session, particularly when you are taking in a lot of new information.</li>
+                            </ul>
+                        </li>
+                        
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Surround Yourself With Others Who Are Learning</h3></li>
+                                <li>Though coding may seem like a solitary activity, it actually works best when you work together. It is extremely important when you are learning to code that you surround yourself with other people who are learning as well. This will allow you to share the tips and tricks you learn along the way.</li>
+                            </ul>
+                        </li>
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Build Something, Anything</h3></li>
+                                <li>For beginners, there are many small exercises that will really help you become confident in programming, as well as develop the muscle memory. Once you have a solid grasp on the basics, start building upon that knowledge using object-oriented programming, rinse and repeat.</li>
+                            </ul>
+                        </li>
+
+                        <li class="li-parent2">
+                            <ul>
+                                <li><h3>Have fun</h3></li>
+                                <li>This one is important. Remember that this stuff is hard and can sometimes feel like a dead end when trying to learn it. If you can't get something working or can't quite understand a concept, just breath deep and recall all the things you do know. Java is a tool so use your imagination, relax and have fun with it!</li>
+                            </ul>
+                        </li>
+                    </ol>
 
                 </div>
 
@@ -181,66 +221,289 @@
     </div>
     
     <div class="container4">
-        <div class="content-xlong">
+        <div class="content-game-long2">
             <div class="video-section">
                 
 
                 <div class="video-brief">
                     <div class="explanation">
-                        <h2 class="sub-title">Integers</h2>
-                        <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number between a specific amount. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
+                        <h2 class="sub-title">Adding the logic.</h2>
+                        <p>At this point we've managed to generate a random number and store it into a variable. We have also created a little welcome screen that prompts the user to enter in a guess. Before moving on think about how you might compare the player's guess to the random number. What sort of structure could we use?</p>
                         <br>
+                        <p>An if statement would work well for this. Let's try implementing a condition to check the player's input against our random number. If it's correct let's output that they won!</p>
+                        <br><br>
                         <div class="code-snip">
-                            <pre class="code-pink">int </pre><pre>a</pre>
-                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator">;</pre>
+                            <pre class="code-pink">if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> == </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed correctly! Answer: "</pre><pre class="operator"> + </pre><pre>answer</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>}</pre>
                             
                         </div>
-                        <br>
-                        <br>
-                        <p>In this example the "int a" portion is our variable declaration. It's telling java that we want to make a variable called "a" and the type is an integer. The "= 4" is our value assignment. The "=" means assign and the "4" is the value.</p>
-                        <br>
-                        <p>Let's see if you can guess what this output would be:</p>
-                        <br>
+                        <br><br><br>
+                        <p>Let's add some code that outputs when they guess too low and too high.</p>
+                        <br><br>
                         <div class="code-snip">
-                            <pre class="code-pink">int </pre><pre>a</pre>
-                            <pre class="operator"> = </pre><pre class="code-literal">4</pre><pre class="operator"> + </pre><pre class="code-literal">3</pre><pre class="operator">;</pre>
-                            <br>
-                            <pre class="code-pink">int </pre><pre>b</pre>
-                            <pre class="operator"> = </pre><pre>a</pre><pre class="operator"> - </pre><pre class="code-literal">5</pre><pre class="operator">;</pre>
-                            <br>
-                            <pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>b</pre><pre>)</pre><pre class="operator">;</pre>
                             
+                            <pre class="code-pink">if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> == </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed correctly! Answer: "</pre><pre class="operator"> + </pre><pre>answer</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>}</pre><pre class="code-pink"> else if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> > </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too high! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>}</pre><pre class="code-pink"> else</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">  System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too Low! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>}</pre>
                         </div>
-                        <br>
-                        <br>
-                        <p>If you got the answer 2 then you'd be right! If you didn't don't worry, look over the code and follow the chain of events. The first line creates an integer called "a". We then assign "a" to the total 7. We create a new integer called "b" and assign the value of "a" minus 5 which would be 2. At the end we print out "b".</p>
+                        <br><br><br>
+                        <p>You can see we added a else if statement as well as an else statement. The else if checks if the player's guess was greater than the answer. If so it says "Too High!". The else statement is the only other option left printing "Too Low!"</p>
+                        <br><p>So we've covered our basis and now let's add this to our code. We want to add this block right after we get our player's guess. You should end up with something like this.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            
+                            <pre>1  </pre><pre class="code-pink">import </pre><pre>java</pre><pre class="operator">.</pre><pre>util</pre><pre class="operator">.*;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <pre>5  </pre><br>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>randomNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>keyboard</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>randomNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>9  </pre>
+                            <br>
+                            <pre>10 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"***** WELCOME! *****"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>11 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"I'm thinking of a number between 1 and 10..."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Please enter a number: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>13 </pre><pre class="code-pink">    int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>keyboard</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>14 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed: "</pre><pre class="operator"> + </pre><pre>guess</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>15</pre>
+                            <br>
+                            <pre>16 </pre><pre class="code-pink">    if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> == </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>17 </pre><pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed correctly! Answer: "</pre><pre class="operator"> + </pre><pre>answer</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>18 </pre><pre>    }</pre><pre class="code-pink"> else if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> > </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>19 </pre><pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too high! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>20 </pre><pre>    }</pre><pre class="code-pink"> else</pre><pre> {</pre>
+                            <br>
+                            <pre>21 </pre><pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too Low! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            
+                            <pre>22 </pre><pre>    }</pre>
+                            <br>
+                            <pre>23 </pre>
+                            <br>
+                            <pre>24 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Goodbye."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>25  </pre><pre>  }</pre>
+                            <br>
+                            <pre>26  </pre><pre>}</pre>
+                        </div>
                     </div>
                 </div>
-                 <br><br>
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/5e69tndxJ8I" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-                
             </div>
         </div>
     </div>
 
-    
+    <div class="container4">
+        <div>
+            <div class="info">
+                <div>
+                    <h2 class="info-title">Almost there!</h2>
+                </div>
+                <p>You might have noticed by now that we didn't use any loops yet! When you run the program and enter a number the logic runs but the program just ends. Let's create a loop around the input and logic section to continue looping if they don't get it right. This way the player can keep trying until they win. If they do get it right, we can stop the loop and end the program.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container4">
+        <div class="content-game-long3">
+            <div class="video-section">
+                
+
+                <div class="video-brief">
+                    <div class="explanation">
+                        <h2 class="sub-title">Adding the loop.</h2>
+                        <p>You learned about two types of loops. One loop is good for when you know how many iterations there will be. The other is when you don't know how many iterations. Think about what type of loop would best serve us here.</p>
+                        <br>
+                        <p>Since we don't know how many iterations, let's use a while loop for this. We will need a condition for the while loop to know when to stop. Let's create a boolean variable called running and initialize it true.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            <pre class="code-pink">boolean</pre><pre> running</pre><pre class="operator"> = </pre><pre class="code-pink">true</pre><pre>;</pre>
+                            
+                            
+                        </div>
+                        <br><br><br>
+                        <p>Next, we'll wrap our input and logic in the while loop.</p>
+                        <br><br>
+                        <div class="code-snip">
+                            <pre class="code-pink">boolean</pre><pre> running</pre><pre class="operator"> = </pre><pre class="code-pink">true</pre><pre>;</pre>
+                            <br>
+                            <pre class="code-pink">while</pre><pre> (running)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-pink">    int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>keyboard</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed: "</pre><pre class="operator"> + </pre><pre>guess</pre><pre>)</pre><pre class="operator">;</pre>
+                      
+                            <br>
+                            <pre class="code-pink">    if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> == </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed correctly! Answer: "</pre><pre class="operator"> + </pre><pre>answer</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>      running</pre><pre class="operator"> = </pre><pre class="code-pink">false</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>    }</pre><pre class="code-pink"> else if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> > </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too high! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>    }</pre><pre class="code-pink"> else</pre><pre> {</pre>
+                            <br>
+                            <pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too Low! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>    }</pre>
+                            <br>
+                            <pre>  }</pre>
+                        </div>
+                        <br><br><br>
+                        <p>You'll notice that all we did here was wrap our input and logic into the while loop. The running variable will be our condition. Since we want the loop to start running we set running to true. We stop the loop by setting running to false if and only if they guess the correct answer.</p>
+                        <br><p>By the end you should have something like this! Play around and see what other things you can do with this. If you got this far, pat yourself on the back. You now have enough to start making some cool stuff. Thanks all happy coding!</p>
+                        <br><br>
+                        <div class="code-snip">
+                            
+                            <pre>1  </pre><pre class="code-pink">import </pre><pre>java</pre><pre class="operator">.</pre><pre>util</pre><pre class="operator">.*;</pre>
+                            <br>
+                            <pre>2  </pre>
+                            <br>
+                            <pre>3  </pre><pre class="code-pink">public class </pre><pre class="code-element-name-type">MyFirstProject</pre><pre> {</pre>
+                            <br>
+                            <pre>4  </pre><pre class="code-pink">  public static void </pre><pre class="code-element-name-type">main</pre><pre>(</pre><pre class="code-element-name-type">String</pre>[] </pre><pre class="code-variable-name">args</pre><pre>) {</pre>
+                            <br>
+                            <pre>5  </pre>
+                            <br>
+                            <pre>6  </pre><pre class="code-element-name-type">    Random </pre><pre>randomNumberGenerator</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Random</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>7  </pre><pre class="code-element-name-type">    Scanner </pre><pre>keyboard</pre><pre class="operator"> = </pre><pre class="code-pink">new</pre><pre class="code-element-name-type"> Scanner</pre><pre>(</pre><pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">in</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>8  </pre><pre class="code-pink">    int </pre><pre>answer</pre><pre class="operator"> = </pre><pre>randomNumberGenerator</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>(</pre><pre class="code-literal">11</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>9  </pre>
+                            <br>
+                            <pre>10 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"***** WELCOME! *****"</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>11 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"I'm thinking of a number between 1 and 10..."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>12 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Please enter a number: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>13  </pre>
+                            <br>
+                            <pre>14 </pre><pre class="code-pink">    boolean</pre><pre> running</pre><pre class="operator"> = </pre><pre class="code-pink">true</pre><pre>;</pre>
+                            <br>
+                            <pre>15 </pre><pre class="code-pink">    while</pre><pre> (running)</pre><pre> {</pre>
+                            <br>
+                            <pre>16 </pre><pre class="code-pink">      int </pre><pre>guess</pre><pre class="operator"> = </pre><pre>keyboard</pre><pre class="operator">.</pre><pre class="code-element-name-type">nextInt</pre><pre>()</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>14 </pre><pre class="code-element-name-type">      System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed: "</pre><pre class="operator"> + </pre><pre>guess</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>15</pre>
+                            <br>
+                            <pre>16 </pre><pre class="code-pink">      if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> == </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>17 </pre><pre class="code-element-name-type">        System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"You guessed correctly! Answer: "</pre><pre class="operator"> + </pre><pre>answer</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>18 </pre><pre>        running</pre><pre class="operator"> = </pre><pre class="code-pink">false</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>18 </pre><pre>      }</pre><pre class="code-pink"> else if</pre><pre> (</pre><pre>guess</pre><pre class="operator"> > </pre><pre>answer</pre><pre>)</pre><pre> {</pre>
+                            <br>
+                            <pre>19 </pre><pre class="code-element-name-type">        System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too high! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>20 </pre><pre>      }</pre><pre class="code-pink"> else</pre><pre> {</pre>
+                            <br>
+                            <pre>21 </pre><pre class="code-element-name-type">        System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Too Low! Guess again: "</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>22 </pre><pre>      }</pre>
+                            <br>
+                            <pre>22 </pre>
+                            <br>
+                            <pre>22 </pre><pre>    }</pre>
+                            <br>
+                            <pre>24 </pre><pre class="code-element-name-type">    System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre class="code-string">"Goodbye."</pre><pre>)</pre><pre class="operator">;</pre>
+                            <br>
+                            <pre>25  </pre><pre>  }</pre>
+                            <br>
+                            <pre>26  </pre><pre>}</pre>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
         <div class="footer-container">
+            
             <div>
-                <h2>Rescources</h2>
+                <table>
+                    <tr>
+                        <th>Java Jujutsu</th>
+                        <th>Logic</th>
+                        <th>Loops</th>
+                        <th>Create</th>
+                    </tr>
+                    <tr>
+                        
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://realpython.com/python-beginner-tips/">Tips - realpython</a> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td> <a href="https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/">Info - frgconsulting</a></td>
+                        <td> <a href="https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too">Quotes - journaldev</a> </td>
+                       
+                        <td> <a href="https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too">Quotes - journaldev</a> </td>
+                        <td> <a href="https://www.techrepublic.com/blog/software-engineer/10-tips-to-go-from-a-beginner-to-an-intermediate-developer/">Tips - techrepublic</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="https://www.theserverside.com/definition/Java">Info - theserverside</a> </td>
+                        <td> <a href="https://dev.to/jeremycmorgan/7-great-programming-quotes-o95">Quotes - dev.to</a> </td>
+                        
+                        <td> <a href="https://dev.to/jeremycmorgan/7-great-programming-quotes-o95">Quotes - dev.to</a> </td>
+                        <td> <a href="https://codeinstitute.net/blog/top-tips-learning-java-programming/">Tips - codeinstitute</a> </td>
+                    </tr>
+                   
+               
+                    
+                </table>
             </div>
-            <div>
-                <p>https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/</p>
+            <div class="footer-bottom">
+                <h3>Cortland Carrillo CSC205 <a href="mailto:ccarri03@yc.edu">ccarri03@yc.edu</a></h3>
             </div>
-            <div>
-                <p>https://www.theserverside.com/definition/Java</p>
-            </div>
-            <div>
-                <p>https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too</p>
-            </div>
+           
+            
         </div>
         
     </footer>

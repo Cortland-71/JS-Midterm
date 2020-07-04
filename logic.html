@@ -34,7 +34,7 @@
                 <li><a href="Carrillo-Midterm.html">HOME</a></li>
                 <li><a href="logic.html">LOGIC</a></li>
                 <li><a href="loops.html">LOOPS</a></li>
-                <li><a href="diceGame.html">NEW GAME</a></li>
+                <li><a href="diceGame.html">CREATE</a></li>
             </ul>
         </nav>
     </div>
@@ -49,7 +49,7 @@
                         <br>
                         <p>Download <a href="https://www.eclipse.org/">Eclipse</a></p>
                         <br>
-                        <p>Having an IDE to write code in makes the process much easier. You can organize and view all of your projects and files in one location. One of the most usefull aspects of using an IDE over a normal text editor is IntelliSense and autofill. IntelliSense allows you to view various options as you type to give you availible suggestions. Autofill allows you to tab compleate so you can spend less time typing! Among these features there are a host of various styling options, debugging tools and documentation abilities that professional programmers rely on.
+                        <p>Having an IDE to write code in makes the process much easier. You can organize and view all of your projects and files in one location. One of the most useful aspects of using an IDE over a normal text editor is IntelliSense and autofill. IntelliSense allows you to view various options as you type to give you available suggestions. Autofill allows you to tab complete so you can spend less time typing! Among these features there are a host of various styling options, debugging tools and documentation abilities that professional programmers rely on.
                         </p>
                     </div>
                 </div>
@@ -71,10 +71,10 @@
                 </div>
                 <div>
                     <p>
-                        Next we're going to take a look at a fundemental concept in all of programming, the variable. A variable is really nothing more than a bucket that can hold data. For example if I said something like (a = 3) you would probably asume that the value of (a) is now (3) yes? In this case (a) is our variable and (3) is our value. 
+                        Next we're going to take a look at a fundamental concept in all of programming, the variable. A variable is really nothing more than a bucket that can hold data. For example if I said something like x = 3 you would probably assume that the value of x is now 3 yes? In this case x is our variable and 3 is our value. 
                     </p>
                     <br>
-                    <p>If I said something like (a + a) you would understand this to equate to the number 6. Variables can change to something else of course but in Java it's importaint to remember that the kind of data that can be stored in a variable must be mentioned explicitly.</p>
+                    <p>If I said something like x + x you would understand this to equate to the number 6. Variables can change to something else of course but in Java it's important to remember that the kind of data that can be stored in a variable must be mentioned explicitly.</p>
                     <br>
                     <p>Let's look at an example...</p>
 
@@ -95,7 +95,7 @@
                 <div class="video-brief">
                     <div class="explanation">
                         <h2 class="sub-title">Integers</h2>
-                        <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number between a specific amount. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
+                        <p>In Java you must define the type of variable you are making. In this example let's look at one of the most commonly used types, the int. int stands for Integer and notice that it is lower case. int can hold positive or negative whole number. When creating a variable you must tell the compiler what type of variable you are making. You can also assign a value to the variable in the same line as shown below.</p>
                         <br>
                         <div class="code-snip">
                             <pre class="code-pink">int </pre><pre>a</pre>
@@ -104,7 +104,7 @@
                         </div>
                         <br>
                         <br>
-                        <p>In this example the "int a" portion is our variable declaration. It's telling java that we want to make a variable called "a" and the type is an integer. The "= 4" is our value assignment. The "=" means assign and the "4" is the value.</p>
+                        <p>In this example the "int a" portion is our variable declaration. It's telling java that we want to make a variable called "a" and the only data it can hold is an integer. The "= 4;" is our value being assigned.</p>
                         <br>
                         <p>Let's see if you can guess what this output would be:</p>
                         <br>
@@ -115,12 +115,12 @@
                             <pre class="code-pink">int </pre><pre>b</pre>
                             <pre class="operator"> = </pre><pre>a</pre><pre class="operator"> - </pre><pre class="code-literal">5</pre><pre class="operator">;</pre>
                             <br>
-                            <pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>b</pre><pre>)</pre><pre class="operator">;</pre>
+                            <pre class="code-element-name-type">System</pre><pre class="operator">.</pre><pre class="code-variable-name">out</pre><pre class="operator">.</pre><pre class="code-element-name-type">println</pre><pre>(</pre><pre>b</pre><pre class="operator"> + </pre><pre>a</pre><pre>)</pre><pre class="operator">;</pre>
                             
                         </div>
                         <br>
                         <br>
-                        <p>If you got the answer 2 then you'd be right! If you didn't don't worry, look over the code and follow the chain of events. The first line creates an integer called "a". We then assign "a" to the total 7. We create a new integer called "b" and assign the value of "a" minus 5 which would be 2. At the end we print out "b".</p>
+                        <p>If you got the answer 9 then you'd be correct. If you didn't don't worry, look over the code and follow the chain of events. This can be a bit tricky, just remember that the "a" variable doesn't actually change after assigning the value 7. It is being used again on the second line but doesn't actually change.
                     </div>
                 </div>
                  <br><br>
@@ -141,7 +141,7 @@
                 </div>
                 <div>
                     <p>
-                        Things are going to be getting a bit more interesting now. Let's see how to implement logic into our code. The idea is to feed in a condition (true or false) and let the computer make a decision. We can do this using the "if", "else if" and "else" statments.
+                        Things are going to be getting a bit more interesting now. Let's see how to implement logic into our code. The idea is to feed in a condition (true or false) and let the computer make a decision. We can do this using the "if", "else if" and "else" statements.
                     </p>
         
 
@@ -162,7 +162,7 @@
                 <div class="video-brief">
                     <div class="explanation">
                         <h2 class="sub-title">Conditions</h2>
-                        <p>As you saw in the video, if statements are very powerfull and allow you to check a condition in order to execute code. Let's look at some examples.</p>
+                        <p>if statements are very powerful and allow you to check a condition in order to execute code. Let's look at some examples.</p>
                         <br>
                         <div class="code-snip">
                             <pre>3  </pre><pre class="code-pink">int </pre><pre>x</pre>
@@ -183,7 +183,7 @@
                         </div>
                         <br>
                         <br>
-                        <p>Did you get "pizza!"? If not, that's okay. Just look at the code again and try and see what you might be missing. If you did get it right you probably realised that x is in fact NOT greater than 10, it is equal to 10. The condition is checking if x is greater than 10. It is not greater it is equal so the "else" block gets executed.</p>
+                        <p>Did you get "pizza!"? If not, that's okay. Just look at the code again and try and see what you might be missing. If you did get it right you probably realized that x is in fact NOT greater than 10, it is equal to 10. The condition is checking if x is greater than 10. It is not greater it is equal so the "else" block gets executed.</p>
                         <br>
                         <p>What about this example?</p>
                         <br>
@@ -206,7 +206,7 @@
                         </div>
                         <br>
                         <br>
-                        <p>This was a trick question, remember that the = is an assignment operator. The == double equals check if two things are the same. Notice on line 5 where the if statment is checking it's condition. It's trying to assign 15 to y, that is not allowed in an if statement. So this code wouldn't compile. What should be there is the double equals == in which case "apples" would get printed.</p>
+                        <p>This was a trick question, remember that the = is an assignment operator. The == double equals check if two things are the same. Notice on line 5 where the if statement is checking it's condition. It's trying to assign 15 to y, that is not allowed in an if statement since it's not a true or false statement. What should be there is the double equals == in which case "apples" would get printed.</p>
                     </div>
                 </div>
                 
@@ -219,18 +219,47 @@
     </div>
     <footer>
         <div class="footer-container">
+            
             <div>
-                <h2>Rescources</h2>
+                <table>
+                    <tr>
+                        <th>Java Jujutsu</th>
+                        <th>Logic</th>
+                        <th>Loops</th>
+                        <th>Create</th>
+                    </tr>
+                    <tr>
+                        
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://www.pexels.com/">Images</a></td>
+                        <td> <a href="https://realpython.com/python-beginner-tips/">Tips - realpython</a> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td> <a href="https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/">Info - frgconsulting</a></td>
+                        <td> <a href="https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too">Quotes - journaldev</a> </td>
+                       
+                        <td> <a href="https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too">Quotes - journaldev</a> </td>
+                        <td> <a href="https://www.techrepublic.com/blog/software-engineer/10-tips-to-go-from-a-beginner-to-an-intermediate-developer/">Tips - techrepublic</a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="https://www.theserverside.com/definition/Java">Info - theserverside</a> </td>
+                        <td> <a href="https://dev.to/jeremycmorgan/7-great-programming-quotes-o95">Quotes - dev.to</a> </td>
+                        
+                        <td> <a href="https://dev.to/jeremycmorgan/7-great-programming-quotes-o95">Quotes - dev.to</a> </td>
+                        <td> <a href="https://codeinstitute.net/blog/top-tips-learning-java-programming/">Tips - codeinstitute</a> </td>
+                    </tr>
+                   
+               
+                    
+                </table>
             </div>
-            <div>
-                <p>https://www.frgconsulting.com/blog/why-is-java-so-popular-developers/</p>
+            <div class="footer-bottom">
+                <h3>Cortland Carrillo CSC205 <a href="mailto:ccarri03@yc.edu">ccarri03@yc.edu</a></h3>
             </div>
-            <div>
-                <p>https://www.theserverside.com/definition/Java</p>
-            </div>
-            <div>
-                <p>https://www.journaldev.com/240/my-25-favorite-programming-quotes-that-are-funny-too</p>
-            </div>
+           
+            
         </div>
         
     </footer>

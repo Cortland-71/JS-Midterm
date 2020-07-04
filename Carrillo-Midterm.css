@@ -35,8 +35,21 @@ body {
 .content-game-long {
     position: relative;
     width: 100%;
-    height: 320vh;
+    height: 310vh;
 }
+
+.content-game-long2 {
+    position: relative;
+    width: 100%;
+    height: 240vh;
+}
+
+.content-game-long3 {
+    position: relative;
+    width: 100%;
+    height: 280vh;
+}
+
 .titles {
     position: relative;
     text-align: left;
@@ -193,17 +206,20 @@ nav {
     border-radius: 10px;
 }
 
-#install-steps {
+#install-steps, #tips {
     list-style: none;
     counter-reset: my-awesome-counter;
     display: grid;
+    gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
     padding:1rem;
     margin:0;
     color: whitesmoke;
 }
 
-#install-steps .li-parent {
+
+
+#install-steps .li-parent, #tips .li-parent2 {
 
     counter-increment: my-awesome-counter;
     display: flex;
@@ -211,7 +227,7 @@ nav {
     font-family: 'Roboto Slab', serif;
 }
 
-#install-steps .li-parent::before {
+#install-steps .li-parent::before,  #tips .li-parent2::before {
 
     content: "0" counter(my-awesome-counter);
     font-weight: bold;
@@ -228,7 +244,18 @@ nav {
     text-align: left;
 }
 
-.li-parent a, .explanation a {
+.li-parent2 ul {
+    list-style: none;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    
+}
+
+
+.li-parent a, .explanation a, .li-parent2 a {
     text-decoration: none;
     color: red;
     font-weight: bold;
@@ -425,7 +452,7 @@ a:hover {
 .container4:nth-child(4) {
     position: relative;
     background-color: rgb(165, 0, 0);
-    height: 25rem;
+    height: 50rem;
 }
 .container4:nth-child(5) {
     background-image: url("pics/dice/keyboard2.jpg");
@@ -433,14 +460,23 @@ a:hover {
     background-size: cover;
 }
 
+.container4:nth-child(6) {
+    position: relative;
+    background-color: rgb(165, 0, 0);
+    height: 25rem;
+}
 
-
+.container4:nth-child(7) {
+    background-image: url("pics/dice/board3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 footer {
     position: relative;
     background-color: rgb(165, 0, 0);
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 
 .footer-container {
@@ -449,4 +485,49 @@ footer {
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    
+}
+table td{
+    padding-top: .5rem;      
+
+}
+
+
+table a, th {
+    color: rgb(202, 202, 202);
+    text-decoration: none;
+    
+}
+
+.footer-bottom {
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(202, 202, 202);
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: .2rem;
+    font-size: .6rem;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+    
+
+}
+
+.footer-bottom a:hover {
+    color: rgb(255, 255, 255);
+    
+
 }
